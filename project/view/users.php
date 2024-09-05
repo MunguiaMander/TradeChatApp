@@ -19,10 +19,12 @@
                             $row = mysqli_fetch_assoc($sql);
                         }
                     ?>
-                    <img src="/TradeChatApp/project/controller/php/images/<?php echo $row['img']; ?>" alt="">
+                    <a href="profile.php">
+                        <img src="/TradeChatApp/project/controller/php/images/<?php echo $row['img']; ?>" alt="" >
+                    </a>
                     <div class="details">
                         <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
-                        <p><?php echo $row['status']; ?></p>
+                        <p><?php echo $row['status']; ?> </p>
                     </div>
                 </div>
                 <a href="/TradeChatApp/project/controller/php/logout.php?logout_id=<?php echo $row['unique_id'];?>" class="logout">Logout</a>
