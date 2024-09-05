@@ -19,7 +19,7 @@ body {
 
 .wrapper {
     background: #fff;
-    max-width: 450px;
+    max-width: 750px;
     width: 100%;
     border-radius: 16px;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
@@ -483,4 +483,327 @@ body {
     .chat-area form button {
         width: 45px;
     }
+}
+
+/* Home page articles */
+.home {
+    padding: 25px 30px;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.home header .main-photo{
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 16px 16px 0 0;
+}
+
+:is(.home, .home-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+:is(.home, .home-list) .content .details {
+    color: #000;
+    margin-left: 20px;
+}
+
+:is(.home, .home-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home header {
+    align-items: center;
+    justify-content: space-between; /* Para que los elementos se distribuyan a lo largo */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+
+.home header .logout {
+    background: #c97070;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.home header .profile-link {
+    background: #333;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.home header .coins{
+    background: #80c9c9;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.home header .profile-link, 
+.home header .logout, 
+.home header .coins {
+    display: inline-block; 
+}
+
+.home .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .search .text {
+    font-size: 18px;
+}
+
+.home .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    font-size: 16px;
+    padding: 0 13px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.home .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home .search button {
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+
+.home .search button.active {
+    background: #333;
+    color: #fff;
+}
+
+.search button.active i::before {
+    content: "\f00d";
+}
+
+.home-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.home-list, .chat-box)::-webkit-scrollbar {
+    width: 0px;
+}
+
+.home-list a {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+}
+
+.home-list a:last-child {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
+.home-list a img {
+    height: 40px;
+    width: 40px;
+}
+
+.home-list a .details p {
+    color: #67676a;
+}
+
+/* Profile page articles */
+
+.profile {
+    padding: 25px 30px;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.profile header .profile-photo{
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 16px 16px 0 0;
+}
+
+:is(.profile, .profile-post-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+:is(.profile, .profile-post-list) .content .details {
+    color: #000;
+    margin-left: 20px;
+}
+
+:is(.profile, .profile-post-list) .details span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profile header {
+    align-items: center;
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+
+.profile header .logout {
+    background: #c97070;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.profile header .profile-link {
+    background: #333;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.profile header .coins{
+    background: #80c9c9;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.profile header .profile-link, 
+.profile header .logout, 
+.profile header .coins {
+    display: inline-block; 
+}
+
+.profile .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .search .text {
+    font-size: 18px;
+}
+
+.profile .search input {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    font-size: 16px;
+    padding: 0 13px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.profile .search input.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.profile .search button {
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.2s ease;
+}
+
+.profile .search button.active {
+    background: #333;
+    color: #fff;
+}
+
+.profile button.active i::before {
+    content: "\f00d";
+}
+
+.profile-post-list {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+:is(.profile-post-list, .chat-box)::-webkit-scrollbar {
+    width: 0px;
+}
+
+.profile-post-list a {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1;
+}
+
+.profile-post-list a:last-child {
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
+.profile-post-list a img {
+    height: 40px;
+    width: 40px;
+}
+
+.profile-post-list a .details p {
+    color: #67676a;
 }

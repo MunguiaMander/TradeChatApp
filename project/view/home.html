@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <section class="home">
+            <header>
+                <img src="img.jpg" alt="" class="main-photo">
+                <section class="form">
+                    <div class="profile-section">
+                        <a href="profile.html" class="profile-link">Entrar al Perfil</a>
+                        <a href="#" class="logout">Cerrar Sesion</a>
+                        <div class="coins">
+                            <p>Tienes: <span id="coin-count">100</span> monedas</p>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <div class="search">
+                <span class="text">Busca una articulo</span>
+                <input type="text" placeholder="Buscar...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="home-list">
+                <a href="#">
+                    <div class="content">
+                        <img src="article.jpg" alt="">
+                        <div class="details">
+                            <span>Bonito juguete Funko
+                            </span>
+                            <p>Remato juguete funko</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+    <script src="/project/controller/javascript/home.js"></script>
+
+</body>
+
+</html>
