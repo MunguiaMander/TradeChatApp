@@ -6,3 +6,9 @@ searchBtn.onclick = () =>{
     searchBar.focus();
     searchBtn.classList.toggle("active")
 }
+
+setInterval(() => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "/TradeChatApp/project/controller/php/home.php", true);
+    xhr.send();
+}, 500);

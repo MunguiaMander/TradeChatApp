@@ -1,27 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php 
+    session_start();
+    include_once "../controller/php/config.php";
+        if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-</head>
+<?php include_once "header.php"; ?>
 
 <body>
 
     <div class="wrapper">
         <section class="home">
             <header>
-                <img src="resources/img.jpg" alt="" class="main-photo">
+                <?php 
+                    $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+                    if(mysqli_num_rows($sql) > 0){
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+                ?>
+                <img src="/TradeChatApp/project/controller/php/images/<?php echo $row['img']; ?>" alt="" class="main-photo">
                 <section class="form">
                     <div class="profile-section">
-                        <a href="profile.html" class="profile-link">Entrar al Perfil</a>
-                        <a href="#" class="logout">Cerrar Sesion</a>
+                        <a href="profile.php" class="profile-link">Entrar al Perfil</a>
+                        <a href="/TradeChatApp/project/controller/php/logout.php?logout_id=<?php echo $row['unique_id'];?>" class="logout">Logout</a>
                         <div class="coins">
                             <p>Tienes: <span id="coin-count">100</span> monedas</p>
                         </div>
+                        <a href="users.php" class="chat-link">Chat</a>
                     </div>
                 </section>
             </header>
@@ -44,7 +50,7 @@
             </div>
         </section>
     </div>
-    <script src="/project/controller/javascript/home.js"></script>
+    <script src="/TradeChatApp/project/controller/javascript/home.js"></script>
 
 </body>
 

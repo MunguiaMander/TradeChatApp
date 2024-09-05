@@ -14,7 +14,7 @@ continueBtn.onclick = () => {
             if (xhr.status === 200) {
                 let data = xhr.response;
                 if (data === "success") {
-                    location.href = "/TradeChatApp/project/view/users.php";
+                    location.href = "/TradeChatApp/project/view/home.php";
                 } else {
                     errorText.style.display = "block";
                     errorText.textContent = data;

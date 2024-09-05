@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php 
+    session_start();
+    include_once "../controller/php/config.php";
+        if(!isset($_SESSION['unique_id'])){
+        header("location: login.php");
+    }
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-</head>
+<?php include_once "header.php"; ?>
 
 <body>
     <div class="wrapper">
         <section class="profile">
             <header>
+                <?php 
+                    $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+                    if(mysqli_num_rows($sql) > 0){
+                        $row = mysqli_fetch_assoc($sql);
+                    }
+                ?>
                 <div class="profile-header">
-                    <img src="resources/img.jpg" class="profile-photo">
+                    <img src="/TradeChatApp/project/controller/php/images/<?php echo $row['img']; ?>" class="profile-photo">
                     <div class="details">
-                        <h2>Mander</h2>
+                        <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
+                        <p><?php echo $row['status']; ?></p>
                         <p class="bio">Esta es la biografía del usuario. Aquí se puede incluir una breve descripción del
                             perfil.</p>
                     </div>
                     <section class="form">
                         <div class="profile-section">
-                            <a href="#" class="logout">Cerrar Sesion</a>
+                            <a href="/TradeChatApp/project/controller/php/logout.php?logout_id=<?php echo $row['unique_id'];?>" class="logout">Logout</a>
                             <div class="coins">
                                 <p>Tienes: <span id="coin-count">100</span> monedas</p>
                             </div>
@@ -61,7 +67,7 @@
         </section>
     </div>
 
-    <script src="/project/controller/javascript/profile.js"></script>
+    <script src="/TradeChatApp/project/controller/javascript/profile.js"></script>
 
 </body>
 

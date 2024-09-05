@@ -544,6 +544,7 @@ body {
     border-radius: 5px;
     font-size: 17px;
 }
+
 .home header .coins{
     background: #80c9c9;
     color: #fff;
@@ -555,9 +556,21 @@ body {
     font-size: 17px;
 }
 
+.home header .chat-link {
+    background: #9becb4;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
 .home header .profile-link, 
 .home header .logout, 
-.home header .coins {
+.home header .coins,
+.home header .chat-link {
     display: inline-block; 
 }
 
