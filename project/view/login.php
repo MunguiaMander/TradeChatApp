@@ -23,7 +23,7 @@
                 <i class="fas fa-eye"></i>
             </div>
             <div class="field button">
-                <input type="submit" name="submit" value="Continue to Chat">
+                <input type="submit" name="submit" value="Continuar a TradeChatApp">
             </div>
             </form>
             <div class="link">Aun no estas registrado? <a href="index.php">Registrate ahora</a></div>

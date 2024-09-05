@@ -38,24 +38,24 @@
                                         $_SESSION['unique_id'] = $result['unique_id'];
                                         echo "success";
                                     }else{
-                                        echo "This email address not Exist!";
+                                        echo "La direccion de correo no existe!";
                                     }
                                 }else{
-                                    echo "Something went wrong. Please try again!";
+                                    echo "Algo salio mal, intente de nuevo!";
                                 }
                             }
                         }else{
-                            echo "Please upload an image file - jpeg, png, jpg";
+                            echo "Sube un archivo de foto con formato: - jpeg, png, jpg";
                         }
                     }else{
-                        echo "Please upload an image file - jpeg, png, jpg";
+                        echo "Sube un archivo de foto con formato: - jpeg, png, jpg";
                     }
                 }
             }
         }else{
-            echo "$email is not a valid email!";
+            echo "$email no es un email valido!";
         }
     }else{
-        echo "All input fields are required!";
+        echo "Llena todos los campos!";
     }
 ?>

@@ -36,7 +36,7 @@
                     <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
                 </div>
                     <div class="field button">
-                    <input type="submit" name="submit" value="Continue to Chat">
+                    <input type="submit" name="submit" value="Continuar a TradeChatApp">
                 </div>
             </form>
             <div class="link">Ya estas registrado? <a href="login.php">Ingresa</a></div>
